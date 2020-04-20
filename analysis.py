@@ -34,9 +34,9 @@ def main():
         later = time()
         times.append(later - now)
         KeyLengths.append(keyBits)
-        print(times)
+        #print(times)
     # plot the statistics
-    plt.title('analysis')
+    plt.title('Security Project 01 - analysis')
     plt.xlabel('Time to infer the key (seconds)')
     plt.ylabel('Key Length (in bits)')
     plt.plot(times, KeyLengths)

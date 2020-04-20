@@ -44,11 +44,11 @@ def receiveEmail(email_address, password):
         connection.select('inbox')
         # get the messages that have "Security Project 01" in the subject
         _, data = connection.search(None, '(SUBJECT "Security Project 01")')
-        #print(data)
+        # print(data)
         message = ""
         # get the latest message
         _, data = connection.fetch(data[0].split()[-1], "(RFC822)")
-        #print(data)
+        # print(data)
         for response_part in data:
             if isinstance(response_part, tuple):
                 msg = email.message_from_string(response_part[1].decode())
