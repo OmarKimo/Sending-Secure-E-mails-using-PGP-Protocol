@@ -88,7 +88,9 @@ def main():
     else:
         email = input("Enter your email address: ")
         password = input("Enter your password: ")
+    #f = open("sample.txt", 'w+')
     received_email = receiveEmail(email, password)
+    #f.write("received_email: {}\n".format(received_email))
     received_message = extractMessage(
         received_email[0], received_email[1]).decode("utf-8")
     print("Received message:\n" + received_message)

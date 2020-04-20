@@ -93,11 +93,16 @@ def main():
         sender_password = input("Enter your password: ")
         receiver_email = input("Enter receiver email address: ")
         message = input("Enter the message: ")
+    #f = open("sample.txt", 'w')
     publicKey = getPublicKey()
+    #f.write("Public Key: n - {} ,\ne - {}\n".format(publicKey.n, publicKey.e))
     sessionKey = generateKey()
+    #f.write("Session Key: {}\n".format(sessionKey))
     #sessionKey = int.from_bytes(os.urandom(7), "big")
     encrypted_key = encryptKey(sessionKey, publicKey)
+    #f.write("encrypted Key: {}\n".format(encrypted_key))
     encrypted_message = encryptMessage(message, sessionKey)
+    #f.write("encrypted Message: {}\n".format(encrypted_message))
     sendEmail(encrypted_key, encrypted_message,
               sender_email, sender_password, receiver_email)
 
