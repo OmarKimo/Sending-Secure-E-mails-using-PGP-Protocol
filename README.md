@@ -5,8 +5,8 @@
 - Suppose Alice wants to send a secure e-mail to Bob, she should do the following steps:
 
   1. Generate a random session key ***Ks*** and encrypt it using Bob’s public key using ***RSA algorithm***.
-  2. Encrypt the plain text e-mail using ***DES*** with the session key ***Ks*** generated in step (1).
-  3. Send both the encrypted session key generated in step (1) ***Ks*** along with the encrypted email generated in step (2).
+  2. Encrypt the plain text e-mail using ***DES*** with the session key ***Ks*** generated in step (i).
+  3. Send both the encrypted session key generated in step (i) ***Ks*** along with the encrypted email generated in step (ii).
 
 - On the receiver side, Bob should do the following steps upon receiving an-email from Alice:
 
